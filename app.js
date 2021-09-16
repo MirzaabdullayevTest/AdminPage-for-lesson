@@ -10,6 +10,9 @@ const session = require("express-session");
 const MongoDBStore = require("connect-mongodb-session")(session);
 const app = express();
 const auth = require("./middleware/auth");
+const dotenv = require('dotenv')
+
+dotenv.config({ path: '/custom/path/to/.env' })
 
 // Admin routes
 const adminRouter = require("./routes/admin");
